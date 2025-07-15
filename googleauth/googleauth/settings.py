@@ -47,6 +47,18 @@ INSTALLED_APPS = [
     "allauth.socialaccount.providers.google"
 ]
 
+SOCIALACCOUNT_PROVIDERS = {
+    "google":{
+        "SCOPE": {
+            "profile",
+            "email"
+        },
+        "AUTH_PARAMS":{
+            "access_type":"online"
+        }
+    }
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -128,3 +140,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTHENTICATION_BACKENDS=(
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.accounts.auth_backends.AuthenticationBackend"
+)
+
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL= "/"

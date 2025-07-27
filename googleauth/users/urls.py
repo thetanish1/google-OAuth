@@ -1,8 +1,8 @@
-from django.urls import path
+from django.urls import path,include
 from . import views
 
 urlpatterns = [
-    path("", views.home),
-    path("logout/", views.logout, name="logout"),
-    path("dashboard/", views.dashboard, name="dashboard")
+    path('',views.index), #home route
+    path("createblog/",views.createblog),
+    path("myblog/", views.myblog)
 ]

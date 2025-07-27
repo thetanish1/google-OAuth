@@ -1,17 +1,24 @@
 body {
-    padding-top: 70px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 70px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .blog-container {
-    margin-top: 40px;
-    margin-bottom: 100px;
+  margin-top: 40px;
+  margin-bottom: 100px;
 }
 
 footer {
-    background-color: #f8f9fa;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+body {
+  padding-top: 60px;
+}
+.logout-btn {
+  float: right;
 }

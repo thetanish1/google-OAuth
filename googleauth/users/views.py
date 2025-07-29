@@ -18,6 +18,7 @@ def createblog(request):
         return redirect('http://127.0.0.1:8000/myblog/')
     return render (request,'blog/form.html')
 
+
 def myblog(request):
     blogs = BlogModel.objects.filter(username=request.user)
     return render(request,'blog/index.html',{'blogs' : blogs})
